@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<dialog id="myDialog" title="GoogleGadgets"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   onload="window.sizeToContent();"
+   buttons="accept,cancel"
+   buttonlabelcancel="Cancel"
+   buttonlabelaccept="Save"
+   ondialogaccept="return doSave();"
+   ondialogcancel="return doCancel();">
+
+
+    
+    <dialogheader title="Save" description="Your Gudget for Firefox as"/>
+    <groupbox>
+      <caption label="File Name"/>
+      <textbox id="file" />
+   </groupbox>
+
+<script>
+<![CDATA[
+
+function doSave(){
+
+window.arguments[0].res  = document.getElementById('file').value;
+ return true;
+}
+
+function doCancel(){
+
+return true;
+}
+]]>
+</script>
+</dialog>

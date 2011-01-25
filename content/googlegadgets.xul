@@ -1,0 +1,61 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+<window
+    id="mywindow"
+    title="Google Gadgets"
+    orient="horizontal"
+    onload="load()"
+    xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+<script src="cap.js" />
+<script src="pref-option.js"/>
+<script src="check.js" />
+<grid flex="1">
+  <columns>
+    <column flex="1"/>
+    <column/>
+  </columns>
+  <rows>
+<row>
+<box>
+<label value="Preferences"  style="color: blue ;text-decoration: underline; cursor:pointer" onclick="window.openDialog('pref-dialog.xul');" />
+<label value="Help"  style="color: blue ;text-decoration: underline; cursor:pointer" onclick="help()"/>
+<label value="FAQ"  style="color: blue ;text-decoration: underline; cursor:pointer" onclick="faq()"/>
+</box>
+
+</row>
+<row>
+<box>
+<image src="google_logo.png"/>
+</box>
+
+</row>
+
+
+<row flex="1">  
+<iframe src="welcome.html" flex="1" id="content-1" type="content"/>
+</row>
+
+<row>
+<label value="Set the current gadget as default"  style="color: blue ;text-decoration: underline; cursor:pointer" onclick="window.openDialog('pref-dialog.xul');" />
+
+</row>
+<row>
+<box width="280">
+<vbox><button id="browse" label="Browse" oncommand="file();"/></vbox> <label value="Find More Gadgets Code"  style="color: blue ;text-decoration: underline; cursor:pointer" onclick="find()"/>
+</box>
+</row>
+
+
+
+    <row><box height="60">
+<textbox id="blog" flex="1"  multiline="true" width="300" height="200" /></box>
+</row>
+<row><box height="20">
+<hbox><vbox>Paste the gadget code here! <button id="save" label="Save Gadget" oncommand="fileName();"/></vbox>
+
+
+</hbox></box></row>
+</rows>
+
+</grid>
+</window>

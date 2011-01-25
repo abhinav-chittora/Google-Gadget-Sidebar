@@ -1,0 +1,5 @@
+<!ENTITY googlegadgets.label "Google Gadgets Sidebar">
+<!ENTITY googlegadgetsContext.label "Google Gadgets">
+<!ENTITY googlegadgetsContext.accesskey "Y">
+<!ENTITY googlegadgetsToolbar.label "Google Gadget">
+<!ENTITY googlegadgetsToolbar.tooltip "Google Gadget">

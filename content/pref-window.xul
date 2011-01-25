@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/" type="text/css"?>
+
+<prefwindow id="googlegadgets-prefs"
+     title="Googelgadgets  Options"
+     xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+  <script type="application/x-javascript"
+  src="chrome://googlegadgets/content/pref-option.js"/>
+<prefpane id="sw2-googlegadgets-pane" label="Google gadgets Settings" description="Set your Preference">
+<description value="Set your default Gadget: "></description>
+  <preferences>
+    <preference id="pref_gadgets" name="extension.googlegadgets.symbol" type="string"/>
+  </preferences>
+ 
+  <hbox align="center">
+    <label value="Browse to find your gadget: "/>
+    <textbox  id="symbol"  maxlength="20"/>
+  </hbox>
+<box>
+<button label="Browse" oncommand="file1()" /></box>
+<label value=" This change will reflect after you restart firefox!"/>
+</prefpane>
+ 
+</prefwindow>

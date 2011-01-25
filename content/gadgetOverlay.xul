@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE overlay SYSTEM "chrome://googlegadgets/locale/googlegadgets.dtd">
+<overlay id="emptySidebarOverlay"
+         xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul">
+ <script type="application/x-javascript"
+  src="chrome://googlegadgets/content/pref-option.js"/> 
+  <menupopup id="viewSidebarMenu">
+    <menuitem key="key_openEmptySidebar" observes="gadgetSidebar"  />
+  </menupopup>
+  
+  <keyset id="mainKeyset">
+    <key id="key_openEmptySidebar" command="gadgetSidebar"
+         key="E" 
+         modifiers="Shift Ctrl" />
+  </keyset>
+  
+  <broadcasterset id="mainBroadcasterSet"> 
+    <broadcaster id="gadgetSidebar" 
+                 label="Google Gadget"
+                 autoCheck="true"
+                 type="checkbox"
+                 group="sidebar"
+		 fixed="false"
+                 sidebarurl="chrome://googlegadgets/content/googlegadgets.xul"
+                 sidebartitle="Google Gadgets"
+                 oncommand="toggleSidebar('gadgetSidebar');"
+		 onload="load()"/>
+  </broadcasterset>
+</overlay>
+

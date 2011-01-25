@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="chrome://global/skin/global.css" type="text/css"?>
+<dialog id="myDialog" title="Preferences"
+   xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"
+   onload="window.sizeToContent();"
+   buttons="accept,cancel"
+   buttonlabelcancel="Cancel"
+   buttonlabelaccept="Save"
+   ondialogaccept="return save1();"
+   ondialogcancel="return doCancel();">
+
+<script src="pref-option.js" />
+    
+    <hbox align="center">
+    <label value="Browse to find your gadget: "/>
+    <textbox  id="symbol"  maxlength="20"/>
+  </hbox>
+<box>
+<button label="Browse" oncommand="file1()" /></box>
+<label value=" This change will reflect after you restart firefox!"/>
+
+<script>
+<![CDATA[
+
+function doSave(){
+
+window.arguments[0].res  = document.getElementById('file').value;
+ return true;
+}
+
+function doCancel(){
+
+return true;
+}
+]]>
+</script>
+</dialog>

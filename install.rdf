@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RDF xmlns="http://www.w3.org/1999/02/22-rdf-syntax-ns#" 
+ xmlns:em="http://www.mozilla.org/2004/em-rdf#">
+  <Description about="urn:mozilla:install-manifest">
+    <em:id>googlegadgets@shree.kant</em:id>
+    <em:name>google gadgets</em:name>
+    <em:version>1.2.1</em:version>
+    <em:creator>shree kant and Abhinav Chittora</em:creator>
+    <em:description>This extension embed google gadget into firefox</em:description>
+    <em:homepageURL>http://www.geekybuddha.org</em:homepageURL>
+    <em:aboutURL>chrome://googlegadgets/content/about.xul</em:aboutURL>
+    <em:optionsURL>chrome://googlegadgets/content/pref-dialog.xul</em:optionsURL>
+    <em:targetApplication>
+      <Description>
+        <em:id>{ec8030f7-c20a-464f-9b0e-13a3a9e97384}</em:id> <!-- firefox -->
+        <em:minVersion>1.5</em:minVersion>
+        <em:maxVersion>4.0b9</em:maxVersion>
+      </Description>
+    </em:targetApplication>
+  </Description>
+</RDF>
